@@ -16,15 +16,10 @@ Accessible depuis un composant Vue, via les computed:
       {
         id: 1,
         title: 'Un titre',
-        desc: 'Une description',
-        time: new Date(),
+        author: 'axel',
+        content: 'Une description',
+        date: `${new Date().getDate() < 10 ? `0${new Date().getDate()}`: new Date().getDate()}/${new Date().getMonth() < 10 ? `0${new Date().getMonth()}` : new Date().getMonth()}/${new Date().getFullYear()} à ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
       },
-      {
-        id: 2,
-        title: 'Un autre titre',
-        desc: 'Une autre description',
-        time: new Date(),
-      }
     ]
   },
   /*
