@@ -23,17 +23,15 @@
                 >
               </li>
               <li class="nav-item">
-                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/Articles"
-                  >Articles</router-link
+                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/"
+                  >Les articles</router-link
                 >
               </li>
               <li class="nav-item">
-                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/admin"
-                  >About</router-link
-                >
+              <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/about"
+                >About</router-link
+              >
               </li>
-              <li class="nav-item"></li>
-              <li class="nav-item"></li>
             </ul>
           </div>
         </div>
