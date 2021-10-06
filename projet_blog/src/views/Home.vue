@@ -7,15 +7,13 @@
           <div class="post-preview">
             <a href="#">
               <h2 class="post-title">
-                {{ item.title }}
+                {{ listArticles }}
               </h2>
               <h3 class="post-subtitle">
                 {{ item.desc }}
               </h3>
             </a>
-            <p class="post-meta">
-              Mis en ligne le : {{ item.time }}
-            </p>
+            <p class="post-meta">Mis en ligne le : {{ item.time }}</p>
             <a class="btn btn-primary text-uppercase" href="#!"
               >En savoir plus →</a
             >
@@ -41,19 +39,26 @@
 /* import HelloWorld from '@/components/HelloWorld.vue' */
 
 export default {
+  data() {
+    return {
+      listArticles: this.$store.state.articles,
+    };
+  },
   props: {
-    item: { type: Object, default: () => { return { 
-    id: 1,
-    title:'Un titre',
-    desc:'Une description',
-    time: new Date(),
-    }}}
-
+    item: {
+      type: Object,
+      default: () => {
+        return {
+          id: 1,
+          title: "Un titre",
+          desc: "Une description",
+          time: `${new Date()}`,
+        };
+      },
+    },
   },
 
-  name: 'Home',
-  components: {
-
-  }
-}
+  name: "Home",
+  components: {},
+};
 </script>
