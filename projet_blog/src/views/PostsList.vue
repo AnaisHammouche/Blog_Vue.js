@@ -6,8 +6,8 @@
 </template>
 
 <script>
-import Home from './Home.vue'
-export default {
+import Home from './Home.vue' //on récupère les données de components Home.js
+export default { //on génère les données de l'objet Home 
     components: {
         Home,
     },

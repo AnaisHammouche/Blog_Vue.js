@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div id="nav">
+    <!-- Navbar du blog -->
+    <div id="nav"> 
       <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
           <button
@@ -23,19 +24,20 @@
                 >
               </li>
              
-              <li class="nav-item">
-                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/about"
-                  >About</router-link
-                >
-              </li>
+              
               <li class="nav-item">
                 <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/articles"
-                  >Article</router-link
+                  >Articles</router-link
                 >
               </li>
               <li class="nav-item">
                 <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/admin"
-                  >Administration</router-link
+                  >Administrateur</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/about"
+                  >À propos de</router-link
                 >
               </li>
             </ul>
@@ -43,6 +45,7 @@
         </div>
       </nav>
     </div>
+    <!-- Header du blog -->
     <header class="masthead" style="background-image: url('/img/header.jpg')">
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -60,7 +63,7 @@
 </template>
 
 <script>
-export default {
+export default { //on génère les données de l'objet navbar 
   name: "navbar",
 };
 </script>
