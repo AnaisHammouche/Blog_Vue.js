@@ -35,9 +35,8 @@
             <p class="post-meta">
               Mis en ligne le : {{ item2.time }}
             </p>
-            <a class="btn btn-primary text-uppercase" href="#!"
-              >En savoir plus →</a
-            >
+            <router-link to="/articles" class="btn btn-primary text-uppercase"
+              >En savoir plus →</router-link>
           </div>
                     <!-- Divider-->
           <hr class="my-4" />
@@ -54,9 +53,8 @@
             <p class="post-meta">
               Mis en ligne le : {{ item3.time }}
             </p>
-            <a class="btn btn-primary text-uppercase" href="#!"
-              >En savoir plus →</a
-            >
+            <router-link to="/articles" class="btn btn-primary text-uppercase"
+              >En savoir plus →</router-link>
           </div>
         </div>
       </div>
@@ -75,23 +73,20 @@ export default {
     title:'What is Lorem Ipsum?',
     desc:'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
     time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
-    title:'Un titre',
-    desc:'Une description',
-    time: new Date(),
     }}},
 
     item2: { type: Object, default: () => { return { 
     id: 2,
-    title:'Un autre titre',
-    desc:'Une autre description',
-    time: new Date(),
+    title:'Why do we use it ?',
+    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry..",
+    time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
     }}},
 
     item3: { type: Object, default: () => { return { 
     id: 3,
-    title:'Encore un autre titre',
-    desc:'Encore une autre description',
-    time: new Date(),
+    title:'Where can I get some ?',
+    desc:'Lorem Ipsum is simply dummy text of the printing and typesetting industry..',
+    time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
     }}}
 
   },
