@@ -1,21 +1,17 @@
 <template>
-    <div> <articles/> </div>
+  <div>
+    <Article />
+  </div>
 </template>
 
 <script>
-import articles from '@/components/articles.vue'
+import Article from "../components/Articles.vue";
 
 export default {
-    name: 'articles',
-
-    components: {
-        articles,
-    }
-
+  components: {
+    Article,
+  },
 };
-
-
-
 </script>
 
 <style>
