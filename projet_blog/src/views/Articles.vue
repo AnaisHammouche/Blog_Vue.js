@@ -1,17 +1,18 @@
 <template>
   <div>
-    <Article />
+  <Article/>
   </div>
 </template>
 
 <script>
-import Article from "../components/Articles.vue";
+
 
 export default {
-  components: {
-    Article,
-  },
+ 
+    name: "Article"
+  
 };
+
 </script>
 
 <style>
