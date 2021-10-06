@@ -18,40 +18,38 @@
           <div class="collapse navbar-collapse" id="navbarResponsive">
             <ul class="navbar-nav ms-auto py-4 py-lg-0">
               <li class="nav-item">
-                <router-link
-                  class="nav-link px-lg-3 py-3 py-lg-4"
-                  to="/"
+                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/"
                   >Home</router-link
                 >
               </li>
               <li class="nav-item">
-                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/admin"
-                  >About</router-link
+                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/"
+                  >Les articles</router-link
                 >
               </li>
-              <li class="nav-item"></li>
-              <li class="nav-item"></li>
+              <li class="nav-item">
+              <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/about"
+                >About</router-link
+              >
+              </li>
             </ul>
           </div>
         </div>
       </nav>
     </div>
-    <router-view />
-    <header
-      class="masthead"
-      style="background-image: url('assets/img/home-bg.jpg')"
-    >
+    <header class="masthead" style="background-image: url('/img/header.jpg')">
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
             <div class="site-heading">
-              <h1 style="font-size:60px">Le blog incroyable</h1>
+              <h1 style="font-size: 60px">Le blog incroyable</h1>
               <span class="subheading">Le blog qui référence des articles</span>
             </div>
           </div>
         </div>
       </div>
     </header>
+    <router-view />
   </div>
 </template>
 
