@@ -1,6 +1,7 @@
 <template>
   <div>
-    <div id="nav">
+    <!-- Navbar du blog -->
+    <div id="nav"> 
       <nav class="navbar navbar-expand-lg navbar-light" id="mainNav">
         <div class="container px-4 px-lg-5">
           <button
@@ -43,6 +44,7 @@
         </div>
       </nav>
     </div>
+    <!-- Header du blog -->
     <header class="masthead" style="background-image: url('/img/header.jpg')">
       <div class="container position-relative px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -60,7 +62,7 @@
 </template>
 
 <script>
-export default {
+export default { //on génère les données de l'objet navbar 
   name: "navbar",
 };
 </script>

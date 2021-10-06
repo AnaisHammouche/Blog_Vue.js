@@ -5,7 +5,7 @@
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
-            <h1>{{ articles[0].title }}</h1>
+            <h1>{{ articles[0].title }}</h1> <!-- On récupère les informations (data) d'articles en fonction de l'index-->
             <p>{{ articles[0].text }}</p>
             <p> {{ articles[0].date}}</p>
             <p> Auteur :{{ articles[0].author}}</p>
@@ -19,7 +19,7 @@
         </div>
       </div>
     </article>
-    <!-- Footer-->
+    <!-- Footer -->
     <footer class="border-top">
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -61,7 +61,7 @@
 </template>
 
 <script>
-export default {
+export default { //on génère les données de l'objet articles 
   name: "articles",
   data() {
     return {
