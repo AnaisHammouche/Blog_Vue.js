@@ -5,20 +5,20 @@
         <div class="col-md-10 col-lg-8 col-xl-7">
           <!-- Post preview-->
           <div class="post-preview">
-            <a href="#">
+            
               <h2 class="post-title">
                 {{ item.title }}
               </h2>
               <h3 class="post-subtitle">
                 {{ item.desc }}
               </h3>
-            </a>
+            
             <p class="post-meta">
               Mis en ligne le : {{ item.time }}
             </p>
-            <a class="btn btn-primary text-uppercase" href="#!"
-              >En savoir plus →</a
-            >
+            <router-link to="/articles" class="btn btn-primary text-uppercase"
+              >En savoir plus →</router-link>
+            
           </div>
           <!-- Divider-->
           <hr class="my-4" />
@@ -50,9 +50,9 @@ export default {
   props: {
     item: { type: Object, default: () => { return { 
     id: 1,
-    title:'Un titre',
-    desc:'Une description',
-    time: new Date(),
+    title:'What is Lorem Ipsum?',
+    desc:'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
+    time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
     }}}
 
   },
