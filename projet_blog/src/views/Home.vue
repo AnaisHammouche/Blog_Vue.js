@@ -24,17 +24,39 @@
           <hr class="my-4" />
           <!-- Post preview-->
           <div class="post-preview">
-            <a href="post.html"
-              ><h2 class="post-title">
-                I believe every human has a finite number of heartbeats. I don't
-                intend to waste any of mine.
-              </h2></a
-            >
+            <a href="#">
+              <h2 class="post-title">
+                {{ item2.title }}
+              </h2>
+              <h3 class="post-subtitle">
+                {{ item2.desc }}
+              </h3>
+            </a>
             <p class="post-meta">
-              Posted by
-              <a href="#!">Start Bootstrap</a>
-              on September 18, 2021
+              Mis en ligne le : {{ item2.time }}
             </p>
+            <a class="btn btn-primary text-uppercase" href="#!"
+              >En savoir plus →</a
+            >
+          </div>
+                    <!-- Divider-->
+          <hr class="my-4" />
+          <!-- Post preview-->
+          <div class="post-preview">
+            <a href="#">
+              <h2 class="post-title">
+                {{ item3.title }}
+              </h2>
+              <h3 class="post-subtitle">
+                {{ item3.desc }}
+              </h3>
+            </a>
+            <p class="post-meta">
+              Mis en ligne le : {{ item3.time }}
+            </p>
+            <a class="btn btn-primary text-uppercase" href="#!"
+              >En savoir plus →</a
+            >
           </div>
         </div>
       </div>
@@ -53,6 +75,23 @@ export default {
     title:'What is Lorem Ipsum?',
     desc:'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
     time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
+    title:'Un titre',
+    desc:'Une description',
+    time: new Date(),
+    }}},
+
+    item2: { type: Object, default: () => { return { 
+    id: 2,
+    title:'Un autre titre',
+    desc:'Une autre description',
+    time: new Date(),
+    }}},
+
+    item3: { type: Object, default: () => { return { 
+    id: 3,
+    title:'Encore un autre titre',
+    desc:'Encore une autre description',
+    time: new Date(),
     }}}
 
   },
