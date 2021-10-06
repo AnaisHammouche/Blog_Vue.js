@@ -5,7 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
-   todos: [
+   /*todos: [
       {
       id: 1,
       title:'Un titre',
@@ -18,7 +18,7 @@ export default new Vuex.Store({
       desc:'Une autre description',
       time: new Date(),
       }
-    ]
+    ]*/
   },
   mutations: {
   },

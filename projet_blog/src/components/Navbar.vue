@@ -24,19 +24,20 @@
                 >
               </li>
              
-              <li class="nav-item">
-                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/about"
-                  >About</router-link
-                >
-              </li>
+              
               <li class="nav-item">
                 <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/articles"
-                  >Article</router-link
+                  >Articles</router-link
                 >
               </li>
               <li class="nav-item">
                 <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/admin"
-                  >Administration</router-link
+                  >Administrateur</router-link
+                >
+              </li>
+              <li class="nav-item">
+                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/about"
+                  >À propos de</router-link
                 >
               </li>
             </ul>

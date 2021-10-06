@@ -40,7 +40,7 @@
 // @ is an alias to /src
 /* import HelloWorld from '@/components/HelloWorld.vue' */
 
-export default {
+export default { //on génère les données de l'objet Home
   props: {
     item: { type: Object, default: () => { return { 
     id: 1,
