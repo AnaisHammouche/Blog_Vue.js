@@ -33,6 +33,11 @@
                   >Article</router-link
                 >
               </li>
+              <li class="nav-item">
+                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/admin"
+                  >Administration</router-link
+                >
+              </li>
             </ul>
           </div>
         </div>
@@ -61,4 +66,7 @@ export default {
 </script>
 
 <style>
+#nav a.router-link-exact-active {
+  color: #00A8B8 !important
+}
 </style>
