@@ -23,6 +23,11 @@
           <div class="post-preview">
             <p class="post-meta">Posted by {{ item.author }}</p>
           </div>
+
+          
+            <br>
+    <b-pagination-nav :link-gen="linkGen" :number-of-pages="5" use-router></b-pagination-nav>
+  
         </div>
         
       </div>
@@ -35,13 +40,8 @@
 </template>
 
 <script>
-
-
-
 // @ is an alias to /src
 /* import HelloWorld from '@/components/HelloWorld.vue' */
-
-
 export default {
   data() {
     return {
@@ -50,7 +50,6 @@ export default {
   },
   
   
-
   methods: {
     redirectArticle: function(id) {
       this.$router.push({ name: 'Article', params: { id: id } })
@@ -60,5 +59,3 @@ export default {
   components: {},
 };
 </script>
-
-

@@ -3,6 +3,7 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+
 export default new Vuex.Store({
   /*
 La state est uniquement modifiable via les mutations,
@@ -18,6 +19,13 @@ Accessible depuis un composant Vue, via les computed:
         title: 'Un titre',
         author: 'axel',
         content: 'Une description',
+        date: `${new Date().getDate() < 10 ? `0${new Date().getDate()}`: new Date().getDate()}/${new Date().getMonth() < 10 ? `0${new Date().getMonth()}` : new Date().getMonth()}/${new Date().getFullYear()} à ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
+      },
+      {
+        id: 2,
+        title: "L'utilisation du v-on",
+        author: 'axel',
+        content: "Le v-on attache un écouteur d'évènement à l'élément. Le type d'évènement écouté est indiqué comme argument. L'expression peut être soit un nom de méthode, soit une ligne d'instruction. Quand il est utilisé sur un élément standard, il écoute uniquement les évènements natifs du DOM. Lorsque des évènements natifs du DOM sont écoutés, la méthode reçoit l’évènement natif comme unique argument. Le v-on peut être écrit par exemple de cette manière '<button v-on:click='TEXT'></button>' ou de cette manière '<button @click='TEXT'></button>'",
         date: `${new Date().getDate() < 10 ? `0${new Date().getDate()}`: new Date().getDate()}/${new Date().getMonth() < 10 ? `0${new Date().getMonth()}` : new Date().getMonth()}/${new Date().getFullYear()} à ${new Date().getHours()}:${new Date().getMinutes()}:${new Date().getSeconds()}`,
       },
     ]
@@ -62,5 +70,18 @@ et retourner de la donnée modifiée (sans la modifier dans la state!!)
   getters: {
   },
   modules: {
+  },
+
+mounted() {
+    if (localStorage.name) {
+      this.articles = localStorage.articles;
+    }
+  },
+  watch: {
+    articles(newArticles) {
+      localStorage.articles = newArticles;
+    }
   }
+
+
 })
