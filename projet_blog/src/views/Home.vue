@@ -1,10 +1,13 @@
 <template>
+
   <div class="home">
-    <div class="container px-4 px-lg-5">
-      <div class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
+
+    
+    <div class="container px-4 px-lg-5 ">
+      <div class="row gx-4 gx-lg-5 justify-content-center ">
+        <div class="col-md-10 col-lg-8 col-xl-7 overflow-scroll">
           <!-- Post preview-->
-          <div class="post-preview">
+          <div class="post-preview ">
             
               <h2 class="post-title">
                 {{ item.title }}
@@ -56,17 +59,38 @@
             <router-link to="/articles" class="btn btn-primary text-uppercase"
               >En savoir plus →</router-link>
           </div>
-        </div>
-      </div>
-    </div>
+          <div class="overflow-auto">
+            <br>
+    <b-pagination-nav :link-gen="linkGen" :number-of-pages="10" use-router></b-pagination-nav>
   </div>
+        </div>
+        
+      </div>
+      
+    </div>
+    
+  </div>
+
+  
 </template>
 
 <script>
+
+
+
 // @ is an alias to /src
 /* import HelloWorld from '@/components/HelloWorld.vue' */
 
+
 export default {
+
+methods: {
+      linkGen(pageNum) {
+        return pageNum === 1 ? '?' : `?page=${pageNum}`
+      }
+    },
+
+
   props: {
     item: { type: Object, default: () => { return { 
     id: 1,
@@ -87,13 +111,23 @@ export default {
     title:'Where can I get some ?',
     desc:'Lorem Ipsum is simply dummy text of the printing and typesetting industry..',
     time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
-    }}}
+    }}},
 
   },
+  
+  
 
   name: 'Home',
-  components: {
 
-  }
-}
+   
+   };
+
+
+
 </script>
+
+<style>
+
+
+
+</style>
