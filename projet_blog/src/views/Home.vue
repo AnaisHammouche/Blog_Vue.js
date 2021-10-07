@@ -28,10 +28,9 @@
           <!-- Post preview-->
           <div class="post-preview">
             <p class="post-meta">Posted by {{ item.author }}</p>
-            
           </div>
-
-          <br />
+        </div>
+        <br />
         <!--             <b-pagination-nav
               :link-gen="linkGen"
               :number-of-pages="5"
@@ -43,7 +42,6 @@
 </template>
 
 <script>
-var count = 0;
 
 // @ is an alias to /src
 /* import HelloWorld from '@/components/HelloWorld.vue' */
