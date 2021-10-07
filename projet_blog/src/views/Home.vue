@@ -28,6 +28,7 @@
           <!-- Post preview-->
           <div class="post-preview">
             <p class="post-meta">Posted by {{ item.author }}</p>
+            
           </div>
 
           <br />
@@ -58,16 +59,6 @@ export default {
   methods: {
     redirectArticle: function (id) {
       this.$router.push({ name: "Article", params: { id: id } });
-    },
-    loadMore: function () {
-      this.busy = true;
-
-      setTimeout(() => {
-        for (var i = 0, j = 10; i < j; i++) {
-          this.data.push({ name: count++ });
-        }
-        this.busy = false;
-      }, 1000);
     },
   },
   name: "Home",
