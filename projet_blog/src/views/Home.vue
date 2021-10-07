@@ -24,10 +24,10 @@
             <p class="post-meta">Posted by {{ item.author }}</p>
           </div>
 
-          <div class="overflow-auto">
+          
             <br>
     <b-pagination-nav :link-gen="linkGen" :number-of-pages="5" use-router></b-pagination-nav>
-  </div>
+  
         </div>
         
       </div>
