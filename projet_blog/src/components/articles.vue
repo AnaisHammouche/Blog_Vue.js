@@ -5,20 +5,10 @@
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
-            <h1>{{ articles[0].title }}</h1> <!-- On récupère les informations (data) d'articles en fonction de l'index-->
-            <p>{{ articles[0].text }}</p>
-            <p> {{ articles[0].date}}</p>
-            <p> Auteur :{{ articles[0].author}}</p>
-            <hr>
-            <h2> {{ articles[1].title }} </h2>
-            <p>{{ articles[1].text }}</p>
-            <p> {{ articles[1].date}}</p>
-            <p> Auteur : {{ articles[1].author}}</p>
-             <hr>
-            <h2> {{ articles[2].title }} </h2>
-            <p>{{ articles[2].text }}</p>
-            <p> {{ articles[2].date}}</p>
-            <p> Auteur : {{ articles[2].author}}</p>
+            <h1>{{ listArticles[param].title }}</h1> <!-- On récupère les informations (data) d'articles en fonction de l'index-->
+            <p>{{ listArticles[param].content }}</p>
+            <p>{{ listArticles[param].date }}</p>
+            <p>Auteur : {{ listArticles[param].author }}</p>
           </div>
         </div>
       </div>
@@ -69,6 +59,8 @@ export default { //on génère les données de l'objet articles
   name: "articles",
   data() {
     return {
+      param: this.$route.params.id - 1,
+      listArticles: this.$store.state.articles,
       articles: [
         {
           title: " What is Lorem Ipsum? ",

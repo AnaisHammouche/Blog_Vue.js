@@ -12,7 +12,7 @@
               {{ item.content }}
             </p>
             <p class="post-meta">Mis en ligne le : {{ item.date }}</p>
-            <button class="btn btn-primary text-uppercase" href="#!">
+            <button class="btn btn-primary text-uppercase" @click="redirectArticle(item.id)">
               En savoir plus →
             </button>
           </div>
@@ -39,6 +39,11 @@ export default {
     };
   },
 
+  methods: {
+    redirectArticle: function(id) {
+      this.$router.push({ name: 'Article', params: { id: id } })
+    }
+  },
   name: "Home",
   components: {},
 };
