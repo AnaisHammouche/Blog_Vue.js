@@ -19,10 +19,6 @@
             <p>{{ articles[2].text }}</p>
             <p> {{ articles[2].date}}</p>
             <p> Auteur : {{ articles[2].author}}</p>
-
-
-
-            
           </div>
         </div>
       </div>

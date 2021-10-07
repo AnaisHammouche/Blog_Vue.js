@@ -30,6 +30,9 @@ On appelle une mutation via un ` commit('nomMutation', data) `
     addArticle(state, data) {
       state.articles.push(data)
     },
+    suppArticle(state, id) {
+      state.articles.splice(id, 1)
+    },
   },
   /*
 Les actions sont commes des méthodes, un peu plus générales, qui peuvent lire
