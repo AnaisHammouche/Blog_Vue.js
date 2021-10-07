@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 
+
 Vue.use(Vuex)
 
 
@@ -12,6 +13,10 @@ accessible de puis n'importe ou sur votre App
 Accessible depuis un composant Vue, via les computed:
 "this.$store.state.todos"
 */
+
+
+// Créations de l'objet-tableau 'articles' avec les données correspondantes (id, title, author,content,date)
+
   state: {
     articles: [
       {
@@ -34,6 +39,14 @@ Accessible depuis un composant Vue, via les computed:
 Les mutations permettent de modifier la donnée contenue dans la "state"
 On appelle une mutation via un ` commit('nomMutation', data) `
 */
+
+
+// Création des fonctions (ajout/edition/suppression)
+
+// addArticle, prenant en param la state et la date
+// Edit item dans le localstorage avec les param correspondants (l'id de la data et la data)
+// Puis pousse les données attendues du state dans le local storage
+
   mutations: {
     addArticle(state, data) {
       localStorage.setItem(data.id, data);
@@ -75,16 +88,7 @@ et retourner de la donnée modifiée (sans la modifier dans la state!!)
   modules: {
   },
 
-mounted() {
-    if (localStorage.articles) {
-      this.articles = localStorage.articles;
-    }
-  },
-  watch: {
-    articles(newArticles) {
-      localStorage.articles = newArticles;
-    }
-  }
+
 
 
 })

@@ -69,8 +69,15 @@
 </template>
 
 <script>
+
 import Marked from 'marked'
+
+
+
+
 const marked = Marked.default;
+
+// Création et initialisation de la data pour le markeddown viewer
 
 export default {
   data() {
@@ -83,6 +90,9 @@ export default {
       newArticleContent: '',
     };
   },
+
+// Création des méthodes poour ajouter/editer et supprimer les articles
+
   methods: {
     addArticle: function() {
       const array = {
@@ -108,6 +118,9 @@ export default {
       this.$store.commit('suppArticle', this.selected)
     }
   },
+
+  // détecte le changement de la valeur de l'imput et le renvoit en markedown
+
   computed: {
 		markHtml() {
 			return marked(this.newArticleContent)

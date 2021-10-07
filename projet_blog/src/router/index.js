@@ -4,6 +4,9 @@ import Home from '../views/Home.vue' //on récupère les données views Home.js
 
 Vue.use(VueRouter)
 
+
+// On définit la variable routes permettant de faire le lien vers les chemins corrrespondants
+
 const routes = [ 
   {
     path: '/',
@@ -26,6 +29,8 @@ const routes = [
     component: () => import('../views/About.vue')
   },
 ]
+
+// Définition de la variable router contenant une nouvelle Vue = Router
 
 const router = new VueRouter({
   mode: 'history',

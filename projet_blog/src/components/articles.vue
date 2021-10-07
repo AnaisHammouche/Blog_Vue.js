@@ -5,7 +5,7 @@
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
-            <h1>{{ listArticles[param].title }}</h1> <!-- On récupère les informations (data) d'articles en fonction de l'index-->
+            <h1>{{ listArticles[param].title }}</h1> <!-- On récupère les informations (data) d'articles en fonction du but recherché via l'index param(title, content,date,author)-->
             <p>{{ listArticles[param].content }}</p>
             <p>{{ listArticles[param].date }}</p>
             <p>Auteur : {{ listArticles[param].author }}</p>
