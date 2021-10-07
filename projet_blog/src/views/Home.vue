@@ -1,8 +1,9 @@
 <template>
+
   <div class="home">
     <div class="container px-4 px-lg-5">
       <div v-for="item in listArticles" :key="item.id" class="row gx-4 gx-lg-5 justify-content-center">
-        <div class="col-md-10 col-lg-8 col-xl-7">
+        <div class="col-md-10 col-lg-8 col-xl-7 overflow-scroll">
           <!-- Post preview-->
           <div class="post-preview">
             <h3 class="post-title">
@@ -23,14 +24,23 @@
             <p class="post-meta">Posted by {{ item.author }}</p>
           </div>
         </div>
+        
       </div>
+      
     </div>
+    
   </div>
+
+  
 </template>
 
 <script>
+
+
+
 // @ is an alias to /src
 /* import HelloWorld from '@/components/HelloWorld.vue' */
+
 
 export default {
   data() {
@@ -38,6 +48,8 @@ export default {
       listArticles: this.$store.state.articles,
     };
   },
+  
+  
 
   methods: {
     redirectArticle: function(id) {
