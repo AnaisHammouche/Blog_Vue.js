@@ -5,7 +5,7 @@
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
           <div class="col-md-10 col-lg-8 col-xl-7">
-            <h1>{{ articles[0].title }}</h1>
+            <h1>{{ articles[0].title }}</h1> <!-- On récupère les informations (data) d'articles en fonction de l'index-->
             <p>{{ articles[0].text }}</p>
             <p> {{ articles[0].date}}</p>
             <p> Auteur :{{ articles[0].author}}</p>
@@ -27,7 +27,7 @@
         </div>
       </div>
     </article>
-    <!-- Footer-->
+    <!-- Footer -->
     <footer class="border-top">
       <div class="container px-4 px-lg-5">
         <div class="row gx-4 gx-lg-5 justify-content-center">
@@ -69,29 +69,7 @@
 </template>
 
 <script>
-
-// var names = ['Matt Maribojoc', 'Lebron James', 'Bill Gates', 'Childish Gambino'] // used to generate posts for this tutorial
-
-// const getPosts = (number) => {
-// 	// generate a number of posts
-// 	// in a real setting, this would be a database call or algorithm
-
-// 	let ret = []
-
-// 	for (var i = 0; i < number; i++) {
-// 		ret.push({
-// 			author: names[i % names.length],
-// 			content: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do.'
-// 		})
-// 	}	
-
-// 	return ret
-// }
-
-// export default getPosts
-
-
-export default {
+export default { //on génère les données de l'objet articles 
   name: "articles",
   data() {
     return {
@@ -109,9 +87,9 @@ export default {
           date: " 11/10/2021",
       },
       {
-          title: "Where can I get some? ",
-          text: " Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
-        author: "Laurent",
+          title: "L'utilisation du 'v-on'",
+          text: "Le v-on attache un écouteur d'évènement à l'élément. Le type d'évènement écouté est indiqué comme argument. L'expression peut être soit un nom de méthode, soit une ligne d'instruction. Quand il est utilisé sur un élément standard, il écoute uniquement les évènements natifs du DOM. Lorsque des évènements natifs du DOM sont écoutés, la méthode reçoit l’évènement natif comme unique argument. Le v-on peut être écrit par exemple de cette manière '<button v-on:click='TEXT'></button>' ou de cette manière '<button @click='TEXT'></button>'",
+        author: "V",
           date: " 11/11/2021",
       },],
     };

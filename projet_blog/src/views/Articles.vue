@@ -7,7 +7,7 @@
 <script>
 
 
-export default {
+export default { //on génère les données de l'objet Article 
     name: "Article"
 };
 

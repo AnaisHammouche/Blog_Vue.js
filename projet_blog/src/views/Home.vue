@@ -1,68 +1,28 @@
 <template>
 
   <div class="home">
-
-    
-    <div class="container px-4 px-lg-5 ">
-      <div class="row gx-4 gx-lg-5 justify-content-center ">
+    <div class="container px-4 px-lg-5">
+      <div v-for="item in listArticles" :key="item.id" class="row gx-4 gx-lg-5 justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7 overflow-scroll">
           <!-- Post preview-->
-          <div class="post-preview ">
-            
-              <h2 class="post-title">
-                {{ item.title }}
-              </h2>
-              <h3 class="post-subtitle">
-                {{ item.desc }}
-              </h3>
-            
-            <p class="post-meta">
-              Mis en ligne le : {{ item.time }}
+          <div class="post-preview">
+            <h3 class="post-title">
+              {{ item.title }}
+            </h3>
+            <p class="post-subtitle my-3">
+              {{ item.content }}
             </p>
-            <router-link to="/articles" class="btn btn-primary text-uppercase"
-              >En savoir plus →</router-link>
-            
+            <p class="post-meta">Mis en ligne le : {{ item.date }}</p>
+            <button class="btn btn-primary text-uppercase" href="#!">
+              En savoir plus →
+            </button>
           </div>
           <!-- Divider-->
           <hr class="my-4" />
           <!-- Post preview-->
           <div class="post-preview">
-            <a href="#">
-              <h2 class="post-title">
-                {{ item2.title }}
-              </h2>
-              <h3 class="post-subtitle">
-                {{ item2.desc }}
-              </h3>
-            </a>
-            <p class="post-meta">
-              Mis en ligne le : {{ item2.time }}
-            </p>
-            <router-link to="/articles" class="btn btn-primary text-uppercase"
-              >En savoir plus →</router-link>
+            <p class="post-meta">Posted by {{ item.author }}</p>
           </div>
-                    <!-- Divider-->
-          <hr class="my-4" />
-          <!-- Post preview-->
-          <div class="post-preview">
-            <a href="#">
-              <h2 class="post-title">
-                {{ item3.title }}
-              </h2>
-              <h3 class="post-subtitle">
-                {{ item3.desc }}
-              </h3>
-            </a>
-            <p class="post-meta">
-              Mis en ligne le : {{ item3.time }}
-            </p>
-            <router-link to="/articles" class="btn btn-primary text-uppercase"
-              >En savoir plus →</router-link>
-          </div>
-          <div class="overflow-auto">
-            <br>
-    <b-pagination-nav :link-gen="linkGen" :number-of-pages="10" use-router></b-pagination-nav>
-  </div>
         </div>
         
       </div>
@@ -83,51 +43,17 @@
 
 
 export default {
-
-methods: {
-      linkGen(pageNum) {
-        return pageNum === 1 ? '?' : `?page=${pageNum}`
-      }
-    },
-
-
-  props: {
-    item: { type: Object, default: () => { return { 
-    id: 1,
-    title:'What is Lorem Ipsum?',
-    desc:'Lorem Ipsum is simply dummy text of the printing and typesetting industry...',
-    time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
-    }}},
-
-    item2: { type: Object, default: () => { return { 
-    id: 2,
-    title:'Why do we use it ?',
-    desc:"Lorem Ipsum is simply dummy text of the printing and typesetting industry..",
-    time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
-    }}},
-
-    item3: { type: Object, default: () => { return { 
-    id: 3,
-    title:'Where can I get some ?',
-    desc:'Lorem Ipsum is simply dummy text of the printing and typesetting industry..',
-    time: `${new Date().getDay()}/${new Date().getMonth()}/${new Date().getFullYear()}`,
-    }}},
-
+  data() {
+    return {
+      listArticles: this.$store.state.articles,
+    };
   },
   
   
 
-  name: 'Home',
-
-   
-   };
-
-
-
+  name: "Home",
+  components: {},
+};
 </script>
 
-<style>
 
-
-
-</style>

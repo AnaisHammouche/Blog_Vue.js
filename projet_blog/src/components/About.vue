@@ -1,7 +1,8 @@
 <template>
+    <!-- Page About du blog-->
    <div class="about">
     <div class="container">
-
+        
       <h1 class="text-center">Blog réalisé par:</h1>
       <div class="row text-center p-5">
         <div class="col-sm-3" style=""><h4>Axel</h4></div>
@@ -50,7 +51,7 @@
 </template>
 
 <script>
-export default {
+export default { //on génère les données de l'objet About 
     name: "About"
 }
 </script>

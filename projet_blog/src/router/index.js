@@ -1,10 +1,10 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Home from '../views/Home.vue'
+import Home from '../views/Home.vue' //on récupère les données views Home.js
 
 Vue.use(VueRouter)
 
-const routes = [
+const routes = [ 
   {
     path: '/',
     name: 'Home',
