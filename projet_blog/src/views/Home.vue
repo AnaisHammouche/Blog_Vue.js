@@ -31,11 +31,7 @@
           </div>
         </div>
         <br />
-        <!--             <b-pagination-nav
-              :link-gen="linkGen"
-              :number-of-pages="5"
-              use-router
-            ></b-pagination-nav> -->
+      
       </div>
       <!-- <b-pagination-nav :link-gen="linkGen" :number-of-pages="3" use-router ></b-pagination-nav> -->
     </div>
@@ -75,6 +71,6 @@ export default {
 
   },
   name: "Home",
-  components: {},
+  
 };
 </script>
