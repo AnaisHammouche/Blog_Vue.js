@@ -73,7 +73,7 @@ et retourner de la donnée modifiée (sans la modifier dans la state!!)
   },
 
 mounted() {
-    if (localStorage.name) {
+    if (localStorage.articles) {
       this.articles = localStorage.articles;
     }
   },
