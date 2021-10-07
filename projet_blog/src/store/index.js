@@ -33,6 +33,17 @@ On appelle une mutation via un ` commit('nomMutation', data) `
     suppArticle(state, id) {
       state.articles.splice(id, 1)
     },
+    editArticle(state, array) {
+      const obj = {
+        id: array.id + 1,
+        title:  array.title,
+        author: array.author,
+        content: array.content,
+        date: array.date,
+      }
+      console.log(array)
+      state.articles.splice(array.id, 1, obj)
+    },
   },
   /*
 Les actions sont commes des méthodes, un peu plus générales, qui peuvent lire
