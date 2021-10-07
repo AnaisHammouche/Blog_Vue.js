@@ -37,7 +37,7 @@
               use-router
             ></b-pagination-nav> -->
       </div>
-      <b-pagination-nav :link-gen="linkGen" :number-of-pages="3" use-router ></b-pagination-nav>
+      <!-- <b-pagination-nav :link-gen="linkGen" :number-of-pages="3" use-router ></b-pagination-nav> -->
     </div>
   </div>
 </template>
@@ -68,9 +68,9 @@ export default {
   
   // création de la methode generateur de lien ayant comme param le num de la page retournant le bon numéro de page
 
-      linkGen(pageNum) {
-        return pageNum === 1 ? '?' : `?page=${pageNum}`
-      }
+      // linkGen(pageNum) {
+      //   return pageNum === 1 ? '?' : `?page=${pageNum}`
+      // }
     
 
   },
