@@ -40,13 +40,8 @@
 </template>
 
 <script>
-
-
-
 // @ is an alias to /src
 /* import HelloWorld from '@/components/HelloWorld.vue' */
-
-
 export default {
   data() {
     return {
@@ -55,7 +50,6 @@ export default {
   },
   
   
-
   methods: {
     redirectArticle: function(id) {
       this.$router.push({ name: 'Article', params: { id: id } })
@@ -65,5 +59,3 @@ export default {
   components: {},
 };
 </script>
-
-
