@@ -3,6 +3,8 @@ import Vuex from 'vuex'
 
 Vue.use(Vuex)
 
+
+
 export default new Vuex.Store({
   /*
 La state est uniquement modifiable via les mutations,
@@ -62,5 +64,18 @@ et retourner de la donnée modifiée (sans la modifier dans la state!!)
   getters: {
   },
   modules: {
+  },
+
+mounted() {
+    if (localStorage.name) {
+      this.articles = localStorage.articles;
+    }
+  },
+  watch: {
+    articles(newArticles) {
+      localStorage.articles = newArticles;
+    }
   }
+
+
 })
