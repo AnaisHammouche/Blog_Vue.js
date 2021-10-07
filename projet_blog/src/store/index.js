@@ -36,9 +36,11 @@ On appelle une mutation via un ` commit('nomMutation', data) `
 */
   mutations: {
     addArticle(state, data) {
+      localStorage.setItem(data.id, data);
       state.articles.push(data)
     },
     suppArticle(state, id) {
+      localStorage.removeItem(id + 1);
       state.articles.splice(id, 1)
     },
     editArticle(state, array) {
@@ -49,8 +51,9 @@ On appelle une mutation via un ` commit('nomMutation', data) `
         content: array.content,
         date: array.date,
       }
-      console.log(array)
       state.articles.splice(array.id, 1, obj)
+      localStorage.removeItem(array.id + 1);
+      localStorage.setItem(array.id + 1, obj)
     },
   },
   /*

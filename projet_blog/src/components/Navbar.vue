@@ -31,7 +31,7 @@
               <li class="nav-item">
                 <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/about"
                   >À propos de</router-link
-                >
+                >About
               </li>
             </ul>
           </div>
