@@ -17,6 +17,7 @@
       <div class="d-flex flex-column align-items-start">
         <label for="newArticleContent" class="mb-4 fw-bold">Contenu de l'article :</label>
         <textarea class="mb-4" name="newArticleContent" v-model="newArticleContent" id="newArticleContent" cols="50" rows="3"></textarea>
+        <div class="border border-1 border-secondary bg-white w-100 mb-4 marked-html" style="height: 100px; overflow: scroll" v-html="markHtml"></div>
       </div>
       <input class="btn btn-success" type="submit" value="Envoyer">
     </form>
@@ -67,6 +68,9 @@
 </template>
 
 <script>
+import Marked from 'marked'
+const marked = Marked.default;
+
 export default {
   data() {
     return {
@@ -102,7 +106,18 @@ export default {
     suppArticle: function() {
       this.$store.commit('suppArticle', this.selected)
     }
-  }
+  },
+  computed: {
+		markHtml() {
+			return marked(this.newArticleContent)
+		}
+	}
 }
 </script>
 
+<style>
+.marked-html p {
+  margin-left: 10px !important;
+  margin-top: 15px;
+}
+</style>

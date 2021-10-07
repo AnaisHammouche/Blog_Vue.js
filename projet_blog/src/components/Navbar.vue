@@ -23,13 +23,6 @@
                   >Home</router-link
                 >
               </li>
-             
-              
-              <li class="nav-item">
-                <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/articles"
-                  >Articles</router-link
-                >
-              </li>
               <li class="nav-item">
                 <router-link class="nav-link px-lg-3 py-3 py-lg-4" to="/admin"
                   >Administrateur</router-link
