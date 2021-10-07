@@ -34,18 +34,19 @@
       </div>
 
       <div class="d-flex flex-column align-items-start">
-        <label for="newArticleTitle" class="mb-4 fw-bold">Titre de l'article :</label>
-        <textarea class="mb-4" name="newArticleTitle" v-model="listArticles[selectedEdit].title" id="newArticleTitle" cols="50" rows="3"></textarea>
+        <label for="editArticleTitle" class="mb-4 fw-bold">Titre de l'article :</label>
+        <textarea class="mb-4" name="editArticleTitle" v-model="listArticles[selectedEdit].title" id="editArticleTitle" cols="50" rows="3"></textarea>
       </div>
 
       <div class="d-flex flex-column align-items-start">
-        <label for="newArticleAuthor" class="mb-4 fw-bold">Auteur de l'article :</label>
-        <textarea class="mb-4" name="newArticleAuthor" v-model="listArticles[selectedEdit].author" id="newArticleAuthor" cols="50" rows="3"></textarea>
+        <label for="editArticleAuthor" class="mb-4 fw-bold">Auteur de l'article :</label>
+        <textarea class="mb-4" name="editArticleAuthor" v-model="listArticles[selectedEdit].author" id="editArticleAuthor" cols="50" rows="3"></textarea>
       </div>
 
       <div class="d-flex flex-column align-items-start">
-        <label for="newArticleContent" class="mb-4 fw-bold">Contenu de l'article :</label>
-        <textarea class="mb-4" name="newArticleContent" v-model="listArticles[selectedEdit].content" id="newArticleContent" cols="50" rows="3"></textarea>
+        <label for="editArticleContent" class="mb-4 fw-bold">Contenu de l'article :</label>
+        <textarea class="mb-4" name="editArticleContent" v-model="listArticles[selectedEdit].content" id="editArticleContent" cols="50" rows="3"></textarea>
+        <div class="border border-1 border-secondary bg-white w-100 mb-4 marked-html" style="height: 100px; overflow: scroll" v-html="markHtmlEdit"></div>
       </div>
       <input class="btn btn-success" type="submit" value="Envoyer">
     </form>
@@ -110,7 +111,10 @@ export default {
   computed: {
 		markHtml() {
 			return marked(this.newArticleContent)
-		}
+		},
+    markHtmlEdit() {
+      return marked(this.listArticles[this.selectedEdit].content)
+    }
 	}
 }
 </script>
