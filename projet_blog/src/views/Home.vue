@@ -32,7 +32,7 @@
         </div>
         
       </div>
-      <b-pagination-nav  :link-gen="linkGen" :number-of-pages="1" use-router></b-pagination-nav>
+      <b-pagination-nav  :link-gen="linkGen" :number-of-pages="1" use-router class=" col-md-5 offset-md-5"></b-pagination-nav>
     </div>
     
   </div>
